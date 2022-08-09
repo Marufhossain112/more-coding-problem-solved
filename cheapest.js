@@ -1,3 +1,4 @@
+//! Find the cheapest phone
 const phonesList = [
   { name: "Nokia", model: "Xpress music", price: 1500, camera: 1.5 },
   { name: "Symphony", model: "W68Q", price: 6500, camera: 4.5 },
@@ -7,11 +8,7 @@ const phonesList = [
   { name: "Oppo", model: "54RXo", price: 15900, camera: 10.5 },
   { name: "Iphone", model: "10", price: 65000, camera: 20.5 },
 ];
-
 function cheapestPhone(phones) {
-  //   cheapestPhone = [];
-  //   assumeCheapest = phones[0].price;
-  //   console.log(assumeCheapest);
   let storePrices = [];
   for (let i = 0; i < phones.length; i++) {
     element = phones[i].price;
@@ -26,11 +23,14 @@ function cheapestPhone(phones) {
       //   console.log(cheapest);
     }
   }
-//   console.log(cheapest);
-  //   console.log(phonesList);
-  //   console.log(firstCheap);
-  //   console.log(storePrices);
+  for (let i = 0; i < phones.length; i++) {
+    let phoneItem = phones[i];
+    // console.log(phoneItem);
+    if (phoneItem.price == cheapest) {
+      console.log(phoneItem.name);
+    }
+  }
   return cheapest;
 }
 let result = cheapestPhone(phonesList);
-console.log(result);
+// console.log(result);
